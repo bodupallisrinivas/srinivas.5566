@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         document.write("control statement ,using break in 17.........<br>")
+for(var i=1;i<20;i++){
+    if(i==17){
+        break;
+    }
+    document.write(i+"<br>")
+}
+document.write("control statement ,using continue in 17.........<br>")
+for(var i=1;i<21;i++){
+    
+    if(i==17){
+       continue;
+    }
+    document.write(i+"<br>")
+}
+
+
+function mul(n){
+        document.write("<br>")
+        document.write("Multiplication table of 5 using functions");
+        document.write("<br>")
+        for(i=1;i<=n;i++){
+            m=5*i;
+            document.write("5"+"x"+i+"=",m,"<br>");
+        }
+    }
+    mul(12);
+    function od(c){
+        document.write("<br>");
+        document.write("Odd numbers from 30 to 1 using functions");
+        document.write("<br>");
+        while(c>=1){
+         if(c%2==1){
+            document.write(c,"<br>");
+        
+         }
+         c--;
+        }
+    }
+    od(30);
+    function sm(sum,i){
+        document.write("<br>");
+        do{
+        sum=sum+i;
+        i++;
+    }while(i<=10)
+    document.write("<br>")
+    document.write("Sum of 1 to 10 numbers is=",sum);
+
+    }
+    sm(0,1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
