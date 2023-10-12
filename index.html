@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+  
+    
+        for(o=1;o<=10;o++){
+            for(p=1;p<=o;p++){
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+
+        document.write("<br><br>")
+      var k=11
+        for(o=1;o<=10;o++){
+            for(p=1;p<=(k-o);p++){
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+
+
+
+       
+
+document.write("<br>")
+function patt3(a){
+    for(i=1;i<=a;i++){
+        for(j=1;j<=i;j++){
+            document.writeln(j)
+        }
+        document.write("<br>")
+    }
+}
+patt3(10)
+document.write("<br><br>")
+
+
+
+
+
+        document.write("<b>Reverse  string</b><br>")
+function rev(a){
+    var b="";
+    for(i=0;a[i];i++){
+        b=a[i]+b;
+    }
+    return b
+}
+document.write(rev("hyderabad"),"<br>")
+document.write(rev("warangal"),"<br>")
+document.write(rev("karimnagar"),"<br>")
+document.write(rev("srinivas"),"<br>")
+
+document.write("<br><br>")
+
+
+
+
+
+
+document.write("<b>lenght of a string without using .lenght method</b><br>")
+function len(a){
+    var c=0;
+    for(i=0;a[i];i++){
+        c++;
+    }
+    return a+" "+c;
+}
+document.write(len("dussehra"),"<br>")
+
+document.write("<br><br>")
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
