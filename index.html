@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        document.write("1. length of string")
+        var str="srinivas";
+        var str1=str.length;
+        document.write("<br>")
+        document.write("length of given string is: "+str1)
+
+       
+
+        
+        document.write("<br>")
+        document.write("<br>")
+        document.write("2.string to covert into lowercase")
+        var str="srinivas";
+        var str1=str.toLowerCase();
+        document.write("<br>")
+        document.write(str1)
+        document.write("<br>")
+        document.write("<br>")
+        
+ document.write("3.string to covert into uppercasecase")
+        var str="srinivas";
+        var str1=str.toUpperCase();
+        document.write("<br>")
+        document.write(str1)
+        document.write("<br>")
+        document.write("<br>")
+
+        document.write("4.trim whitespace from begin to end");
+        var str="  hisrinivas  ";
+        var str1=str.trim();
+        document.write("<br>")
+        document.write(str1);
+        document.write("<br>")
+        document.write("<br>")
+
+    
+        document.write("5. Extract substring from a string");
+        document.write("<br>")
+        var str="hi.srinivas";
+        var str1=str.substring(3,8);
+        document.write(str1)
+        document.write("<br>")
+        document.write("<br>")
+
+        document.write("6. split string into an array of substrings");
+        var str="srinivas";
+        var str1=str.split("? ")
+        document.write("<br>")
+        document.write(str1)
+        document.write("<br>")
+        document.write("<br>")
+
+        
+
+        document.write("7. To check if a string starts with specific substring")
+        var str="hihellowe";
+        var str1=str.startsWith("srinivas");
+        document.write("<br>")
+        document.write(str1);
+        document.write("<br>")
+        document.write("<br>")
+
+        document.write("8. To check if a string ends with a specific substring")
+        var str = "Hello, world!";
+        var endsWithWorld = str.endsWith("world!");
+        document.write("<br>")
+        document.write(endsWithWorld);
+        document.write("<br>")
+        document.write("<br>")
+
+        document.write("9. To count the occurrences of a specific character in a string:")
+        var str = "apple phinappale";
+        var count = str.split("p").length - 1;
+        document.write("<br>")
+        document.write(count);
+        document.write("<br>")
+        document.write("<br>")
+
+        document.write("10. To check if a string is empty:")
+        var str = "";
+        var isEmpty = str.length === 0;
+        document.write("<br>")
+        document.write(isEmpty);
+        document.write("<br>")
+        document.write("<br>")
+
+        document.write("11.  To replace all occurrences of a substring within a string:")
+        var str = " happy independent day";
+        var newStr = str.replaceAll("p", "k");
+        document.write("<br>")
+        document.write(newStr);
+        document.write("<br>")
+        document.write("<br>")
+
+        document.write("12. To check if a string contains only numeric characters:")
+        var str = "12345";
+        var isNumeric = /^\d+$/.test(str);
+        document.write("<br>")
+        document.write(isNumeric);
+        document.write("<br>")
+        document.write("<br>")
+
+        document.write("13. reverse a string: ")
+        var str = "bodupalli srinivas";
+        var reversedStr = str.split("").reverse().join("");
+        document.write("<br>")
+        document.write(reversedStr);
+        document.write("<br>")
+        document.write("<br>")
+
+        document.write("14. concatenate of two strings: ")
+        var str="namsakar";
+        var str1="musk";
+        var str2=str+str1
+        document.write("<br>");
+        document.write(str2)
+        document.write("<br>")
+        document.write("<br>")
+
+        document.write("15. find index of specific character: ")
+        var str = "Hello, world!";
+        var index = str.indexOf("o");
+        document.write("<br>")
+        document.write(index);
+        document.write("<br>")
+        document.write("<br>")
+
+        document.write("16. To check if a string contains a specific substring:")
+        var str = "Hello, world!";
+        var containsHello = str.includes("Hello");
+        document.write("<br>")
+        document.write(containsHello);
+        document.write("<br>")
+        document.write("<br>")
+
+
+ 
+        document.write(" 17.To check if a string contains a specific substring:")
+        var str = "Hello, world!";
+        var containsHello = str.includes("Hello");
+        document.write("<br>")
+        document.write(containsHello);
+        document.write("<br>")
+        document.write("<br>")
+
+
+        document.write("18. repeating string for n number of times: ")
+        var str = "anasena";
+        var repeatedStr = str.repeat(3);
+        document.write("<br>")
+        document.write(repeatedStr);
+        document.write("<br>")
+        document.write("<br>")
+
+        document.write(" 19.To replace the first occurrence of a substring within a string:")
+        var str = "janasena";
+        var newStr = str.replace("a", "s");
+        document.write("<br>")
+        document.write(newStr);
+        document.write("<br>")
+        document.write("<br>")
+
+        document.write(" 20. checking palindrome or not: ")
+        var str = "racecar";
+        var reversedStr = str.split("").reverse().join("");
+        var isPalindrome = str === reversedStr;
+        document.write("<br>")
+        document.write(isPalindrome);
+        document.write("<br>")
+        document.write("<br>")
+
+    
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
