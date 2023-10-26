@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task10</title>
+</head>
+<body>
+    <script>
+        document.write("<b>1.Create a function that takes two numbers as arguments and returns their sum.</b><br>");
+        function values(a,b){
+            sum= a+b;
+            return sum;
+        }
+        let a=10;
+        let b=20;
+        document.write(`sum of a and b is ${values(a,b)}<br><hr>`);
+        document.write("<b>2.Write a function that takes an integer minutes and converts it to seconds</b><br>");
+        function secondsconver(int){
+             seconds=int*60;
+             document.write(`${int} minutes is equal to ${seconds} seconds <br><hr>`);
+
+        }
+        let int=50;
+        secondsconver(int);
+        document.write("<b>3.Create a function that takes a number as an argument, increments the number by +1 and returns the result.</b><br>");
+        function inc(num){
+            var result = num+1;
+            return result;
+        }
+        document.write(`${inc(3)}<br><hr>`);
+        document.write("<b>4.Create a function that takes the age in years and returns the age in days</b><br>");
+        function age_to_day(){
+            years=25;
+            days=years*25;
+            document.write(`Your age is ${years} years,then your age in days is ${days} days. <br><hr>`);
+        }
+        age_to_day();
+        document.write("<b>5.sniCreate a function that takes voltage and current and returns the calculated power.</b><br>");
+        function calulate_powe(v,c){
+            let power=v*c;
+            document.write(`Power is : ${power}<br><hr>`);
+        }
+        calulate_powe(15,10);
+        document.write(`<b>6.Write a function that returns the string "something" joined with a space " " and the given argument a.</b><br>`);
+        function strjoin(add){
+            let b= "somethin"+" "+add;
+            return b;
+        }
+        document.write(`${strjoin("else")}<br><hr>`);
+        document.write(`<b>7.Create a function that takes two arguments. Both arguments are integers, a and b. Return true if one of them is 10 or if their sum is 10.</b><br>`);
+        function rettrue(a,b){
+            if(a==10 || b==10 || a+b==10){
+                document.write(`${true}<br><hr>`);
+            }
+            else{
+                document.write(false);
+            }
+        }
+        rettrue(7,3);
+        document.write(`<b>8.Create a function that takes two strings as arguments and returns either true or false depending on whether the total number of characters in the first string is equal to the total number of characters in the second string.</b><br>`);
+        function check_T_or_F(str3,str4){
+            if(str3.length==str4.length){
+                document.write(`${true}<br>`);
+            }
+            else{
+                document.write(`${false}<br><hr>`);
+            }
+        }
+        check_T_or_F("Ram","Sai");
+        check_T_or_F("hello","welcome");
+        document.write(`<b>9.Create a function that takes a name and returns a greeting in the form of a string. Don't use a normal function, use an arrow function.</b><br>`);
+        let greet = (name) => {
+            document.write(`"Hai! ${name}, welcome."<br><hr>`);
+        }
+        let name="srinu";
+        greet(name);
+        document.write(`<b>10.Create a function that takes an array of 10 numbers (between 0 and 9) and returns a string of those numbers formatted as a phone number (e.g. (555) 555-5555).</b><br>`);
+        function Number_format(arr) {
+            let fir3 = "";
+            let sec3 = "";
+            let last4 = "";
+            for (var i = 0; i < arr.length; i++) {
+                if (i < 3) {
+                    fir3 += arr[i].toString();
+                } else if (i >= 3 && i < 6) {
+                    sec3 += arr[i].toString();
+                } else if (i >= 6) {
+                    last4 += arr[i].toString();
+                }
+            }
+            return `(${fir3} ${sec3}-${last4})`;
+        }
+        let arr=[0,1,2,3,4,5,6,7,8,9];
+        document.write(`${Number_format(arr)}<br><hr>`);
+        document.write(`<b>11.Create a function that returns an array of strings sorted by length in ascending order.</b><br>`);
+        function arr_sort(arr2){
+            let arr3=arr2.sort((a,b)=>{return a.length-b.length});
+            document.write(`${arr3}<br><hr>`);
+        }
+        arr_sort(["a", "ccc", "dddd", "bb"]);
+       
+        
+    </script>
+</body>
+</html>
