@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-widt>h, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write(`<b>1.Write a JavaScript program to list the properties of a JavaScript object.</b>`);
+        document.write("<br>");
+        const obj1={
+            name:"srinivas",
+            age:21,
+            id:4452,
+            gender:"male"
+        };
+        document.write(`obj1={
+            name:"srinivas",
+            age:21,
+            id:4452,
+            gender:"male"
+        };<br>`);
+        // document.write(`(1)Given object is:-`);
+        document.write(obj1);
+        document.write("Output:- ");
+        var itm1=Object.keys(obj1);
+        document.write(itm1);
+        // document.write(`(1)${itm1}`);
+
+        document.write("<br>");
+        document.write("<br>");
+
+        document.write(`<b>2.Write a JavaScript program to get the length of a JavaScript object.</b>`);
+        document.write("<br>");
+        var myObject = {
+        name: "John",
+        age: 30,
+        city: "New York"
+        };
+        function getObjectLength(obj) {
+        var keys = Object.keys(obj);
+        return keys.length;
+        }
+        var length = getObjectLength(myObject);
+        document.write("Length of the object: " + length);
+        
+
+        document.write("<br>");
+        document.write("<br>");
+
+        document.write(`<b>3.Write a JavaScript program to delete the rollno property from the following object. Also print the object before or after deleting the property.</b>`);
+        document.write("<br>");
+        var student = {
+        name : "srinivas",
+        sclass : "94r",
+        rollno : 18
+        };
+        console.log("(2)Before deletion of property:- ");
+        console.log(student);
+        var itm2=Object.entries(student);
+        document.write("Given object entries are:- ");
+        document.write(itm2);
+        document.write("<br>After removing rollno property from object:-<br>");
+        delete student.rollno;
+        var itm3=Object.entries(student);
+        document.write(itm3);
+        console.log("(2)After:- ");
+        console.log(student);
+
+        document.write("<br>");
+        document.write("<br>");
+
+        document.write(`<b>4. Write a JavaScript program to display the reading status of the books</b>`);
+        document.write("<br>");
+        var library = [ 
+        {
+        title: 'Bill Gates',
+        author: 'The Road Ahead',
+        readingStatus: true
+        },
+        {
+        title: 'Steve Jobs',
+        author: 'Walter Isaacson',
+        readingStatus: true
+        },
+        {
+        title: 'Mockingjay: The Final Book of The Hunger Games',
+        author: 'Suzanne Collins',
+        readingStatus: false
+       }];
+       for (var i = 0; i < library.length; i++) 
+       {
+       var book = "'" + library[i].title + "'" + ' by ' + library[i].author + ".";
+       if (library[i].readingStatus) {
+      document.write("Already read " + book);
+       } else
+       {
+       document.write("You still need to read " + book);
+       }
+       }
+
+        document.write("<br>");
+        document.write("<br>");
+
+        document.write(`<b>5.Write a JavaScript program that returns a subset of a string.</b>`);
+        document.write("<br>");
+        String.prototype.sub_String = function() 
+        {
+        var subset = [];
+        for (var m = 0; m < this.length; m++) 
+        {
+        for (var n = m+1; n<this.length+1; n++) 
+        {
+         subset.push(this.slice(m,n));
+        }
+        }
+        return subset;
+         };
+        document.write("srinivas".sub_String());
+
+        document.write("<br>");
+        document.write("<br>");
+
+        document.write("<b>6. Write a JavaScript program to get the length of a JavaScript object.</b><br>");
+        const obj2={
+            name:"srinivas"
+        };
+        document.write("Entries in given object are:- ");
+        console.log("(3)Given object is:- ");
+        console.log(obj2);
+        var itm4=Object.entries(obj2);
+        document.write(itm4);
+        // document.write("<br>"+typeof(itm4));
+        document.write(`<br>The length of object is ${itm4.length}`);
+        console.log(`(3)It's length is ${itm4.length}`);
+        document.write("<br>");
+        document.write("<br>");
+        
+        document.write(`<b>7. Write a JavaScript function to print all the methods in a JavaScript object.</b>`);
+        document.write("<br>");
+        function FindAllMethods(obj) {
+    return Object.getOwnPropertyNames(obj).filter(function(property) {
+        return typeof obj[property] == "function";
+        });
+         }
+        document.write(FindAllMethods(Math)); 
+        document.write(FindAllMethods(Array));
+        function all_properties(obj) 
+        {
+        return Object.getOwnPropertyNames(obj);
+        }
+
+        document.write(all_properties(Math));
+        document.write(all_properties(Array));
+
+        document.write("<br>");
+        document.write("<br>");
+
+        document.write("<b>8.  Write a JavaScript program to check whether an object contains a given property.</b><br>");
+        var student = {
+        name : "rakesh kumar",
+        sclass : "45",
+        rollno : 2 
+        };
+        document.write("Given object:- ");
+        document.write(`student = {
+        name : "rakesh kumar",
+        sclass : "45",
+        rollno : 2 
+        }<br>`)
+        var n="rollno";
+        var m=Object.keys(student);
+        document.write(`"${n}" property `);
+         for(i=0;i<m.length;i++){
+            if(m[i]==n){
+                var test="exists.";
+                document.write(test);
+            }
+            // else{
+            //      continue;
+            // }
+        }
+        if(test!=="exists."){
+            document.write("doesn't exists.");
+        }
+
+        document.write("<br>");
+        document.write("<br>");
+
+        document.write("<b>9. Write a JavaScript function to convert an object into a list of `[key, value]` pairs.</b>");
+        document.write("<br>");
+        const obj5={
+            name:"james",
+            age:24,
+            gender:"male"
+        };
+        document.write(`obj5={
+            name:"james",
+            age:"24",
+            gender:"male"
+        }<br>`);
+        document.write("Output:- ");
+        var itm5=Object.entries(obj5);
+        document.write(itm5);
+        // here in console we are getting as a list
+        console.log(`(5)Output list:- `);
+        console.log(itm5);
+    </script>
+    
+</body>
+</html>
