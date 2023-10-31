@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_Task11</title>
+</head>
+<body>
+    <script>
+    
+    //         1. *Encapsulation with Getters and Setters:*
+        console.log("1. Create a BankAccount class with encapsulated properties (accountNumber, balance). Implement methods getAccountNumber(), getBalance(), deposit(amount), and withdraw(amount) ensuring encapsulation.");
+        class BankAccount{
+            // constructor(){
+            //     var accountNumber;
+            //     var balance;
+
+            // }
+            SetAccountNo(a){
+                 this.accountNumber=a;
+            }
+            Setbalance(b){
+                 this.balance=b;
+            }
+            getAccountNumber(){
+                console.log(`Account Number: ${this.accountNumber}`);
+            }
+            getBalance(){
+                console.log(`Balance: ${this.balance}`);
+            }
+            deposit(amount){
+                this.balance+=amount;
+                console.log(`Current Balance(After Deposit) is: ${this.balance}`);
+            }
+            withdraw(amount){
+                if(amount<this.balance){
+                    console.log(`Withdrawn Amount is: ${amount} and current balance is: ${this.balance-amount}`);
+                }
+                
+            }
+        }
+        let obj1=new BankAccount();
+        obj1.SetAccountNo(123456789);
+        obj1.Setbalance(100000);
+        obj1.getAccountNumber();
+        obj1.getBalance();
+        obj1.deposit(10000);
+        obj1.withdraw(30000);
+
+
+        // 2. *Private Properties:* (Note:Here not using any private properties)
+            console.log("2. Implement a class TemperatureConverter with a private property celsius. Implement methods setCelsius(value), getCelsius(), convertToFahrenheit(), and convertToKelvin() ensuring private access to the celsius property.");
+            class TemperatureConverter{
+                // constructor(){
+                //     var val;
+                // }
+                setcelcius(value){
+                    this.val=value;
+                }
+                getCelcius(){
+                    console.log(`Given Celcius value: ${this.val}`);
+                }
+                convertToFahrenheit(){
+                   console.log(`In Farenhiet: ${this.val*(9/5)+32}`);
+                }
+                convertToKelvin(){
+                    console.log(`In Kelvin: ${this.val+273.15}`);
+                }
+            }
+            const con1=new TemperatureConverter();
+            con1.setcelcius(45);
+            con1.getCelcius();
+            con1.convertToFahrenheit();
+            con1.convertToKelvin();
+
+        // 3. *Static Method and Inheritance:*
+            console.log("3. Create a MathOperations class with a static method square(number). Create a child class AdvancedMathOperations that extends MathOperations. Implement a static method cube(number) in AdvancedMathOperations.");
+            class MathOperations{
+                constructor(){
+                    console.log("Square and Cube of a number 4 are:");
+                }
+                static square(number){
+                    var num1=number*number;
+                    console.log(num1);
+                }
+            }
+            class AdvancedMathOperations extends MathOperations{
+                constructor(){
+                    super();
+                }
+                static cube(number){
+                    var num=number*number*number;
+                    console.log(num);
+                }
+            }
+            obj=new AdvancedMathOperations();
+            // console.log(obj);Here when we declare object automatically it calls the constructor method,so by default we get the o/p of constructor.
+            MathOperations.square(4);
+            AdvancedMathOperations.cube(4);
+
+
+
+            // 4. *Inheritance and Method Overriding:*
+            console.log("4. Create a class Shape with methods calculateArea() and calculatePerimeter(). Create child classes Circle and Square that inherit from Shape. Override the calculateArea() method in both child classes.");
+            class shape{
+                constructor(){
+                    console.log(`Area and perimeters of`);
+                }
+                calculateArea(){
+                    console.log(`override method `);
+                }
+                calculatePerimeter(){
+                    console.log(`override method`);
+                }
+            }
+            class circle extends shape{
+                constructor(){
+                    super();
+                    console.log(` circle :-`);
+                }
+                calculateArea(r){
+                    console.log("Area:",3.14*r*r);
+                }
+                calculatePerimeter(r){
+                    console.log("Perimeter:",2*3.14*r);
+                }
+            }
+            class square extends shape{
+                constructor(){
+                    super();
+                    console.log(` square :-`);
+                }
+                calculateArea(s){
+                    console.log("Area",s*s);
+                }
+                calculatePerimeter(s){
+                    console.log("Perimeter:",4*s);
+                }
+            }
+            // obje1=new shape();
+            const obje2=new circle();
+            obje2.calculateArea(5);
+            obje2.calculatePerimeter(5);
+            const obje4=new square();
+            obje4.calculateArea(5);
+            obje4.calculatePerimeter(5);
+
+            // here the both methods of parent class are overrided by the child class methods.
+
+        
+    </script>
+</body>
+</html>
