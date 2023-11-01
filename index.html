@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+
+
+</head>
+
+<body>
+    <div id="Resume">
+
+        <h1 id="name">Bodupalli srinivas</h1>
+        <h3 id="role">Frontend Developer</h3>
+        <h2 class="headings">Summary</h2>
+        <hr>
+        <p>Highly motivated and enthusiastic frontend developer with a strong passion for creating visually appealing
+            and
+            user-friendly web
+            applications. Proficient in HTML, CSS, and JavaScript, with a solid understanding of frontend framework such
+            as
+            React.
+            Committed to staying updated with the latest web development trends and technologies. Excellent
+            problem-solving
+            skills and
+            ability to collaborate effectively in a team environme
+        </p>
+        <h2 class="headings">Projects</h2>
+        <hr>
+        
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas commodi laudantium, illum nihil rerum necessitatibus odio iure facilis iste voluptatum optio architecto unde consectetur? Unde laudantium repellat maxime delectus et?</p>
+        
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore tempore ad iste numquam beatae, aperiam modi molestias error saepe, perferendis possimus quod illo nemo dolorum sapiente distinctio voluptatem culpa! Ex.
+        </p>
+
+        <h2 class="headings">Education</h2>
+        <hr>
+        <h2 style="color:teal;">kakatiya university</h2>
+        <h3>aarora degree College</h3>
+        <p id="Date">08/2019 - 07/2023</p>
+<hr>
+        <h2 style="color: teal;">Intermediate</h2>
+        <h3>Aadarsh Junior College</h3>
+        <p id="Date">2017-2019</p>
+
+        <h2 class="headings">Skills</h2>
+        <hr>
+        <p id="skills">HTML &nbsp; CSS &nbsp; &nbsp; BOOTSTRAP &nbsp; &nbsp; JAVASCRIPT &nbsp; 
+            
+        </p>
+
+        
+    </div>
+    <script>
+
+        var divElement = document.getElementById("Resume");
+        divElement.style.width = "50%";
+        divElement.style.height = "100%";
+        divElement.style.cssText='margin:0 20% 0 20%;'
+
+
+
+        let nameElement = document.getElementById("name")
+        nameElement.style.fontFamily = "Arial,sans-sarif";
+        nameElement.style.marginBottom = "-15px"
+      nameElement.style.color = 'blue'
+
+        let roleElement = document.getElementById("role");
+        roleElement.style.cssText = "font-family: Arial, sans-serif; color : brown; margin-bottom : -15px;";
+
+
+        var headingElements = document.querySelectorAll('.headings');
+        headingElements.forEach(function (element) {
+            element.style.fontFamily = 'Arial, sans-serif';
+            element.style.marginBottom = '-2px'
+            element.style.color = 'green'
+        }
+        );
+        var contentElement=document.getElementsByTagName("p")
+           for(let i=0;i<contentElement.length;i++)
+        {
+            contentElement[i].style.fontFamily = 'Arial, sans-serif';
+            contentElement[i].style.marginBottom = '-2px'
+            // contentElement[i].style.color = '#c44b65'
+
+
+        }
+
+        var subHeadings=document.getElementsByTagName("h3")
+        for(var i=0;i<subHeadings.length;i++){
+            subHeadings[i].style.fontFamily='Arial, sans-serif'
+            subHeadings[i].style.marginBottom='-10px'
+
+        }
+        var bottomGap=document.getElementById("bottom")
+        bottomGap.style.marginBottom="100px";
+        
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
